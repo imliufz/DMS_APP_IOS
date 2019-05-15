@@ -1,0 +1,94 @@
+/**
+ * 2019-03-07  当前页样式覆盖
+ */
+body {
+	background-color: #FFFFFF;
+}
+
+input[type='button']:enabled:active,
+input[type='button'].mui-active:enabled,
+input[type='submit']:enabled:active,
+input[type='submit'].mui-active:enabled,
+input[type='reset']:enabled:active,
+input[type='reset'].mui-active:enabled,
+button:enabled:active,
+button.mui-active:enabled,
+.mui-btn:enabled:active,
+.mui-btn.mui-active:enabled{
+	color: #333333;
+}
+.cardexplain {
+	padding-top: 5px;
+	position: relative;
+}
+.xf-res-round {
+	position: absolute;
+	top: 54px;
+	left: 5%;
+	width: 90%;
+	background-color: #FFFFFF;
+	box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.05);
+	border-radius: 8px;
+	padding: 10px 15px;
+}
+
+.xf-res-round td .line {
+	background-color: #1790E4 !important;
+	display: block;
+	width: 60px;
+	height: 3px;
+	position: relative;
+	margin-left: -30px;
+	left: 50%;
+}
+
+.xf-res-round tbody .biaoge:last-child {
+	border-bottom: none;
+}
+
+.round li.nob .px{
+	padding-left: 0;
+}
+.list-header{
+	margin-top: 80px;
+	padding: 10px 0;
+}
+#dayButton,
+#monButton{
+	font-weight: 500;
+}
+#tb_query .biaoge{
+	height: 54px;
+	font-size: 15px;
+}
+.dropdown-select{
+	background-size: 10px;
+}
+/* 视图切换按钮 */
+.table-view{
+	background: url(../../images/icon-table-view.png) no-repeat center center / contain;
+	background-size: 22px;
+	height: 22px;
+}
+.graphics-view{
+	background: url(../../images/icon-graphics-view.png) no-repeat center center / contain;
+	background-size: 22px;
+	height: 22px;
+}
+
+/* 数据列表 */
+
+.bordered th{
+	background-color: #F5F5F5 !important;
+	color: #666666 !important;
+	font-weight: 400;
+}
+.bordered td, 
+.bordered th {
+    border-left: 1px solid #E5E5E5;
+    border-top: none;
+}
+ul.round,
+.bordered{
+	border: none;
+}

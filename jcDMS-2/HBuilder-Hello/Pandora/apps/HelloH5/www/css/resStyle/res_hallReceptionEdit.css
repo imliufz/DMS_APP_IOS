@@ -1,0 +1,145 @@
+/**
+ * 2019-03-07  当前页样式覆盖
+ */
+body {
+	background-color: #F5F5F5;
+}
+
+/* 筛选条件蒙层弹出时,固定背景 */
+.no-scroll {
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+input[type='button']:enabled:active,
+input[type='button'].mui-active:enabled,
+input[type='submit']:enabled:active,
+input[type='submit'].mui-active:enabled,
+input[type='reset']:enabled:active,
+input[type='reset'].mui-active:enabled,
+button:enabled:active,
+button.mui-active:enabled,
+.mui-btn:enabled:active,
+.mui-btn.mui-active:enabled {
+	color: #333 !important;
+}
+
+
+/* table */
+	{
+	padding-top: 44px;
+	background-color: #F5F5F5;
+}
+
+#rp {
+	height: 44px;
+	background-color: #FFFFFF !important;
+}
+
+#rp td input {
+	background-color: #FFFFFF !important;
+	height: 41px !important;
+	font-size: 15px;
+	display: block;
+	margin: 0 auto;
+}
+
+#rp td .line {
+	background-color: #1790E4 !important;
+	display: block;
+	width: 60px;
+	height: 3px;
+	position: relative;
+	margin-left: -30px;
+	left: 50%;
+}
+#reportTable{
+	box-shadow: 0 1px 4px 0 rgba(0,0,0,0.05);
+}
+
+/* 列表 */
+.customer-old,
+.customer-new {
+	height: 19px !important;
+	width: 19px !important;
+	display: block;
+	border: none !important;
+	margin-top: 11px;
+	float: right;
+}
+
+.customer-new {
+	background: url(../../images/customer-new.png) no-repeat center center / contain !important;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.customer-old {
+	background: url(../../images/customer-old.png) no-repeat center center / contain !important;
+
+}
+
+.dropdown-select {
+	background-size: 10px;
+	width: 90%;
+}
+
+.biaoge {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+}
+
+.biaoge td {
+	/* height: 44px; */
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 15px;
+}
+.biaoge td:first-child {
+	-webkit-box-flex: 2;
+	-moz-box-flex: 2;
+	-webkit-flex: 2;
+	-ms-flex: 2;
+	flex: 2;
+}
+
+.biaoge td:last-child {
+	-webkit-box-flex: 5;
+	-moz-box-flex: 5;
+	-webkit-flex: 5;
+	-ms-flex: 5;
+	flex: 5;
+}
+
+.biaoge input {
+	padding-left: 0 !important;
+}
+
+#activityChooseBtn{
+	border: 1px solid #1790E4;
+	background-color: #FFFFFF;
+	color: #1790E4;
+	font-size: 13px;
+	border-radius: 15px;
+}
+
+.chooseBtn{
+	border: 1px solid #1790E4;
+	background-color: #FFFFFF;
+	color: #1790E4;
+	font-size: 13px;
+	border-radius: 15px;
+}
+
+.activityQueryBtn{
+	border: 1px solid #1790E4;
+	background-color: #FFFFFF;
+	color: #1790E4;
+	font-size: 17px;
+	border-radius: 15px;
+}

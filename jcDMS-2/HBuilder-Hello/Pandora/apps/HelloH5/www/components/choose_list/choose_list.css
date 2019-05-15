@@ -1,0 +1,60 @@
+
+/* 单选组件 */
+.mask_box{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 1001;
+	background-color:rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100%;
+}
+.choose_l_box{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 1002;
+	width: 100%;
+	background-color: #FFFFFF;
+}
+.choose_l_title{
+	margin: 0;
+	line-height: 44px;
+	font-size: 17px;
+	text-align: center;
+	color: #333;
+	border-bottom: 1px solid #F5F5F5;
+}
+.choose_l_data{
+	margin: 0;
+	max-height: 350px;
+	overflow-y: scroll;
+}
+.choose_l_data li{
+	border-bottom: 1px solid #F5F5F5;
+	padding: 0 15px;
+	color: #333;
+	line-height: 44px;
+}
+.choose_l_data li.active{
+	color: #1790E4;
+	position: relative;
+}
+.choose_l_data li.active:active{
+	background-color: #F8FCFF;
+}
+.choose_l_data li.active:after{
+	content: "\e472";
+	display: inline-block;
+	font-family: Muiicons;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1;
+	text-decoration: none;
+	-webkit-font-smoothing: antialiased;
+	position: absolute;
+	right: 5px;
+	bottom: 25%;
+}
+/* 单选组件-End*/

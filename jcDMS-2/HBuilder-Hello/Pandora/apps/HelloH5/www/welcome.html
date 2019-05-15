@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="js/html_head.js"></script>
+	<title>长安汽车DMS移动应用</title>
+	<script type="text/javascript">
+		mui.init();
+		$(document).ready(function() {
+//			var fso, fldr, s ="";
+//			fso = new ActiveXObject("Scripting.FileSystemObject");
+//			fldr = fso.GetDrive(fso.GetFolder("./images/welcome"));
+//			var aa = fldr.Files;
+//			alert(aa.length);
+		});
+	</script>
+</head>
+<body">
+	<div style="text-align: center;position: absolute;z-index: 999;bottom: 60px;width: 100%;" >
+		<img src="images/welcomeIndex/skipWelcome.png" onclick="ToUrl('login.html');" width="134px" height="35px"></img>
+	</div>
+		<div id="slider" class="mui-slider" >
+			<div class="mui-slider-group">
+				<!-- 第一张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="./images/welcome/welcome_1.png">
+					</a>
+				</div>
+				<!-- 第二张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="./images/welcome/welcome_2.png">
+					</a>
+				</div>
+				<!-- 第三张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="./images/welcome/welcome_3.png">
+					</a>
+				</div>
+			</div>
+			<div class="mui-slider-indicator" style="top: 8px;">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+			</div>
+		</div>
+</body>
+</html>

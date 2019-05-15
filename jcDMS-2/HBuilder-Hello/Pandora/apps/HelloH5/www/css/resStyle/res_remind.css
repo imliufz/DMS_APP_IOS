@@ -1,0 +1,23 @@
+/**
+ * 2019-03-07  消息样式覆盖
+ */
+.xf-res-cardexplain i.mui-icon.mui-icon-arrowright{
+	font-size: 18px;
+	color: #CCCCCC;
+	font-weight: 500;
+	margin-top: 1.5px;
+	margin-right: 15px;
+}
+
+.xf-res-cardexplain tr{
+	border-bottom: 1px solid #F6F6F6;
+}
+
+.xf-res-cardexplain .nob{
+	color: #666;
+}
+.remNum{
+	margin-top: -43px;
+}
+
+

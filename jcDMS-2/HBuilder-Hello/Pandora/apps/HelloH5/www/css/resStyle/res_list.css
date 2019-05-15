@@ -1,0 +1,194 @@
+/**
+ * 2019-03-07  当前页样式覆盖
+ */
+body {
+	background-color: #F5F5F5;
+}
+
+/* 筛选条件蒙层弹出时,固定背景 */
+.no-scroll {
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+/* 筛选列表 */
+.xf-res-cardexplain {
+	padding-bottom: 0;
+}
+
+.xf-res-cardexplain td {
+	font-size: 13px;
+	line-height: 1;
+}
+
+.xf-res-cardexplain ul.round {
+	border: none;
+}
+.xf-res-cardexplain #tb_query .biaoge {
+	align-items:center;
+	display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;
+}
+.xf-res-cardexplain #tb_query .biaoge td:first-child{
+	-webkit-box-flex:2;-moz-box-flex:2;-webkit-flex:2;-ms-flex:2;flex:2;
+}
+.xf-res-cardexplain #tb_query .biaoge td:last-child{
+	-webkit-box-flex:3;-moz-box-flex:3;-webkit-flex:3;-ms-flex:3;flex:3;
+}
+
+.xf-res-cardexplain .round li.nob .px {
+	text-indent: 0px;
+}
+
+.xf-res-cardexplain .round li.nob .dropdown-select {
+	padding: 5px 10px 5px 0;
+	background-size:12px;
+}
+.xf-res-cardexplain .round li.nob{
+	display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;
+}
+.xf-res-cardexplain .round li.nob input:first-child{
+	-webkit-box-flex:3;-moz-box-flex:3;-webkit-flex:3;-ms-flex:3;flex:3;
+}
+.xf-res-cardexplain .round li.nob input:last-child{
+	-webkit-box-flex:1;-moz-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;
+}
+
+/* 操作按钮 */
+.xf-nob {
+	position: absolute;
+	width: 100%;
+	border-top: 1px #F5F5F5 solid;
+	right: 0;
+	bottom: 0;
+	padding-bottom: 10px;
+	padding-top: 5px;
+}
+
+.xf-nob .clear-btn {
+	background: rgba(216, 216, 216, 1);
+	border-radius: 5px;
+	width: 9.375rem;
+	padding: 6px 20px;
+	font-size: 16px;
+	border: none;
+}
+
+.xf-nob .submit {
+	background: rgba(23, 144, 228, 1) !important;
+	border-radius: 5px;
+	width: 9.375rem;
+	text-align: center;
+	float: left;
+}
+
+/*#startDate {
+	width: 62% !important;
+	padding-right: 0 !important;
+}
+
+#endDate {
+	width: 62% !important;
+	padding-right: 0 !important;
+}*/
+
+/* 跟进邀约列表 */
+
+.xf-res-tabList {
+	background-color: #F5F5F5;
+}
+/* 列表tab */
+.xf-res-tabList div {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.xf-res-rp table {
+	position: fixed;
+	top: 43px;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	height: 40px;
+}
+
+.xf-res-rp table,
+.xf-res-rp input {
+	background-color: #1790E4 !important;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 15px !important;
+	font-weight: 300;
+	text-align: center;
+}
+
+.xf-res-rp .active input,
+.xf-res-rp .active a {
+	color: rgba(255, 255, 255, 1);
+}
+
+.xf-res-rp .icon-sjarrow {
+	position: absolute;
+	right: 50%;
+	bottom: -4.5px;
+	margin-right: -12px;
+	background: url(../../images/icon-sjarrow.png) no-repeat center center / contain;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+}
+/* 列表item */
+.xf-res-tabList .weimob-list-item-all{
+	background-color: #FFFFFF;
+	margin-bottom: 8px;
+	border: none;
+	padding: 0 8px;
+	height: auto;
+}
+
+.xf-res-tabList .weimob-list-item-title{
+	background-color: #FFFFFF;
+}
+
+.xf-res-tabList .weimob-list-item-title .cus-name{
+	font-size: 15px;
+	color: #333333;
+}
+
+
+.xf-res-tabList .weimob-list-item-body{
+	border: none;
+}
+
+
+.xf-res-tabList .weimob-list-item-title tr{
+	border-bottom: 1px dotted #E5E5E5;
+	height: 44px;
+}
+
+.xf-res-tabList .weimob-list-item-image {
+	width: 20px;
+	height: 20px;
+}
+
+.xf-res-tabList .weimob-list-itemred-button {
+	border-radius: 15px;
+	top:5%
+}
+.table-menu{
+	margin-top: 40px;
+	background-color: #FFFFFF;
+}
+.table-menu ul{
+	list-style: none;
+}
+.table-menu ul li{
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	font-size: 15px;
+	color: #999;
+	font-weight: 300;
+}
+.table-menu ul li.active{
+	color: #1790E4;
+}

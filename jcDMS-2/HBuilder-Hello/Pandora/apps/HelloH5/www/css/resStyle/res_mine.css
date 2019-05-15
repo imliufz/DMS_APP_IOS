@@ -1,0 +1,115 @@
+/**
+ * 2019-03-07  当前页样式覆盖
+ */
+body{
+	background-color: #FFFFFF;
+}
+.xc-res-cardexplain{
+	padding-top: 0;
+	height: 87% !important;
+}
+.blue-bg{
+	background-color: #1790E4;
+	height: 120px;
+}
+.mine-content{
+	position: relative;
+	top: -60px;
+	margin: 0 15px;
+	background-color: #FFFFFF;
+	border-radius: 4px;
+	padding: 0.9375rem 0.9375rem 0.625rem 0.9375rem;
+	box-shadow: 0 3px 10px 0 rgba(0,0,0,0.05);
+}
+.mine-body{
+	margin-bottom: 10px;
+}
+/* 头像 */
+.mine-body .user-mask{
+	position: absolute;
+	left: 15px;
+	top: -20px;
+	width: 4.375rem ;
+	height: 4.375rem ;
+	overflow: hidden;
+	border-radius: 4px;
+	background-color: #FFFFFF;
+	box-shadow: 0 3px 10px 0 rgba(0,0,0,0.05);
+}
+.mine-body .user-mask img{
+	display:block;height:auto;max-width:100%;
+}
+/* 姓名职位 */
+.mine-body .user-info h4{
+	font-size: 17px;
+	font-weight: 400;
+	color: #333;
+}
+.mine-body .user-info p{
+	font-size: 13px;
+	font-weight: 400;
+	color: #999;
+	margin-bottom: 0;
+}
+/* 圈子 */
+.mine-body .user-qz span{
+	width:73.5px;
+	padding: 2px;
+	color: #FFFFFF;
+	font-size: 15px;
+	font-weight: 300;
+	border-radius: 20px;
+	text-align: center;
+	display: block;
+	background:linear-gradient(270deg,rgba(255,203,2,1) 0%,rgba(255,154,2,1) 100%);
+	margin-left: 1.25rem;
+}
+/* 菜单 */
+.mine-menu{
+	padding-top: 10px;
+}
+.mine-menu .cell-1{
+	position: relative;
+	text-align: center;
+	font-size: 15px;
+	color: #333;
+}
+.mine-menu .y-line{
+	position: absolute;
+	right: 0;
+	top: -3px;
+	width: 1px;
+	height: 30px;
+	background-color: #E5E5E5;
+	-webkit-transform: scale(.5);
+	transform: scale(.5);
+}
+/* 客服/意见反馈 */
+.mine-menu .icon-kfrx,
+.mine-menu .icon-yjfk{
+	position: relative;
+	top: -2px;
+	display: inline-block;
+	vertical-align: middle;
+	width: 25px;
+	height: 25px;
+}
+.mine-menu .icon-kfrx{
+	width: 22px;
+	height: 22px;
+	background: url(../../images/mine-02.png) no-repeat center center / contain;
+}
+.mine-menu .icon-yjfk{
+	background: url(../../images/mine-01.png) no-repeat center center / contain;
+}
+/* 列表 */
+.xf-res-round img{
+	position: relative;
+	top: -1.5px;
+	width: 16px !important;
+	height: 16px !important;
+	margin-left: 5px;
+}
+.xf-res-round .settingTr{
+	border-bottom: 1px solid #F5F5F5;
+}

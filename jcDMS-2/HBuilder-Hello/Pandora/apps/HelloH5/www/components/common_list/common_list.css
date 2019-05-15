@@ -1,0 +1,144 @@
+/**
+ * 数据列表样式
+ */
+.common-list-box{
+	margin-top: 8px;
+	background-color: #FFFFFF;
+	padding: 10px 15px;
+	font-size: 16px;
+	color: #333;
+}
+/* header */
+.common-list-header{
+	padding-bottom: 10px;
+	border-bottom: 1px dotted #E5E5E5;
+}
+
+.common-list-header .icon-state-1,
+.common-list-header .icon-state-2,
+.common-list-header .icon-state-3,
+.common-list-header .icon-state-4,
+.common-list-header .icon-360,
+.common-list-header .icon-phone,
+.common-list-header .icon-wx,
+.common-list-header .icon-zhwx,
+.common-list-header .icon-msg{
+	position: relative;
+	top: -2px;
+	left: 5px;
+	vertical-align: middle;
+	display: inline-block;
+	background-size: 16px;
+	width: 16px;
+	height: 16px;
+}
+.common-list-header .icon-state-boy,
+.common-list-header .icon-state-girl{
+	position: relative;
+	top: -1px;
+	vertical-align: middle;
+	display: inline-block;
+	background-size: 32px;
+	width: 32px;
+	height: 32px;
+}
+.common-list-header .icon-state-1{
+	background: url(../../images/list-icon-01.png) no-repeat center center / contain;
+}
+.common-list-header .icon-state-2{
+	background: url(../../images/list-icon-02.png) no-repeat center center / contain;
+}
+.common-list-header .icon-state-3{
+	background: url(../../images/list-icon-03.png) no-repeat center center / contain;
+}
+.common-list-header .icon-state-4{
+	background: url(../../images/list-icon-04.png) no-repeat center center / contain;
+}
+.common-list-header .icon-state-boy{
+	background: url(../../images/boy.png) no-repeat center center / contain;
+}
+.common-list-header .icon-state-girl{
+	background: url(../../images/girl.png) no-repeat center center / contain;
+}
+
+.common-list-header .cus-state{
+	font-size: 14px;
+}
+.common-list-header .icon-btn li{
+	margin-left:8px;
+}
+.common-list-header .icon-phone,
+.common-list-header .icon-360,
+.common-list-header .icon-msg,
+.common-list-header .icon-zhwx,
+.common-list-header .icon-wx,
+.common-list-header .icon-msg{
+	background-size: 24px;
+	top: 0;
+	width: 24px;
+	height: 24px;
+}
+
+.common-list-header .icon-phone{
+	background: url(../../images/bohao.png) no-repeat center center / contain;
+}
+.common-list-header .icon-wx{
+	background: url(../../images/weChat.png) no-repeat center center / contain;
+}
+.common-list-header .icon-360{
+	background: url(../../images/list-icon-360.png) no-repeat center center / contain;
+}
+.common-list-header .icon-zhwx{
+	background: url(../../images/zhwx.png) no-repeat center center / contain;
+}
+.common-list-header .icon-msg{
+	background: url(../../images/duanxing.png) no-repeat center center / contain;
+}
+/* body */
+.common-list-body{
+	padding-top: 10px;
+	font-size: 12px;
+}
+.common-list-body .list-label{
+	padding-bottom: 10px;
+}
+.common-list-body .list-label ul{
+	margin-left: 20px;
+}
+.common-list-body .list-label-item{
+	background:rgba(23,144,228,0.2);
+	color: #1790E4;
+	border-radius: 3px;
+}
+/* footer */
+.common-list-footer{
+	color: #999999;
+	font-size: 12px;
+}
+/* 右下角按钮 */
+.right-bottom-button{
+	position: fixed;
+	bottom: 44px;
+	right: 12px;
+	z-index: 99;
+}
+.right-bottom-button input{
+	background-color: #1790E4;
+	height: 44px;
+	width: 128px;
+	color: #FFFFFF;
+	border: 0.2px solid #1790E4;
+	border-radius: 20px;
+	opacity:0.9;
+}
+.cus-name{
+	width: 60px;
+	overflow: hidden;
+	vertical-align:bottom;
+	white-space: nowrap;
+	/*text-overflow:ellipsis;*//*超长线索省略号*/
+}
+.checkBoxTable{
+	background-color: #1790e442;
+}
+

@@ -1,0 +1,108 @@
+/**
+ * 2019-03-07  当前页样式覆盖
+ */
+body {
+	background-color: #F5F5F5;
+}
+/* 导航 */
+.xf-res-topBar .r{
+	margin-top: -44px;
+}
+.xf-res-topBar .r span{
+	margin-top: -44px;
+	font-size: 15px !important;
+	font-weight: 300 !important;
+}
+.xf-mui-content .screen-box{
+	border-bottom:1px solid #F5F5F5 !important;
+}
+/* 列表内容 */
+.xf-mui-content{
+	padding-top: 44px;
+}
+.xf-mui-content .user-mask{
+	width: 36px;
+	height: 36px;
+	overflow: hidden;
+	display: block;
+	border-radius: 20px;
+	padding: 4px 3px 3px 3px;
+	vertical-align: middle;
+	background-color:#1790E4;
+	margin: 0 auto;
+}
+.xf-mui-content .user-mask img{
+	display:block;height:auto;max-width:100%;
+}
+.xf-mui-content i.label{
+	font-style:normal;
+	padding: 2px 6px;
+	border-radius:18px;
+	border:1px solid rgba(23,144,228,1);
+	font-size: 12px;
+	color: rgba(23,144,228,1);
+	margin-left: 10px;
+}
+.xf-mui-content .mui-content-padded{
+	margin: 0;
+	padding: 10px 15px;
+}
+.xf-mui-content .mui-card{
+	margin-bottom: 0 !important;
+	border-bottom:1px solid #F5F5F5;
+	padding-bottom:10px;
+}
+.xf-mui-content .mui-card dl{
+	padding-right:10px;
+}
+.xf-mui-content .mui-card dl dd{
+	margin-left:50px !important;
+}
+
+.xf-mui-content .mui-card .bg-gray{
+	font-size: 13px;
+	line-height: 1;
+	padding-left: 10px;
+}
+.xf-mui-content .mui-card .zan-box img{
+	vertical-align: middle;
+	position: relative;
+	top: 3px;
+	width: 18px !important;
+	height: 18px !important;
+}
+.xf-mui-content .mui-card .creat-info{
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+.xf-mui-content .mui-card .creat-info span{
+	font-size:12px;
+}
+/* 图标 */
+.xf-mui-content .creat-info img{
+	vertical-align: middle;
+	position: relative;
+	top: -2px;
+	width: 18px !important;
+	height: 18px !important;
+}
+/* 你有新的回复 */
+.xf-res-tip{
+	background-color: #FFF8E6 !important;
+	/* display: block !important; */
+	height: 28px;
+}
+.xf-res-tip button{
+	background-color: #FFF8E6 !important;
+	color: #E49814;
+	font-size: 14px;
+	border: none;
+}
+.xf-res-tip .mui-btn .mui-badge{
+	position: relative;
+	top: -1px;
+	background-color: #E49814 !important;
+	color: #FFFFFF;
+	font-size: 12px;
+	padding: 2px 6px;
+}

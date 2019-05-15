@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="js/html_head.js"></script>
+<style>
+.msgTd {
+	height: 45px;
+	border: none;
+	width: 100%;
+	font-size: 16px;
+}
+</style>
+<title>在岗状态</title>
+</head>
+<body onselectstart="return true;" ondragstart="return false;" >
+	<script type="text/javascript" src="js/detail_head.js?_menu_name=在岗离岗维护&_back_url=mine.html" id="detail_head_js"></script>
+	<form id="fm" method="post">
+		<div class="mui-content" style="padding-top: 60px;">
+			<h5 class="mui-content-padded">选择在岗状态</h5>
+			<div class="mui-card">
+				<form class="mui-input-group">
+					<div class="mui-input-row mui-checkbox mui-left" style="margin-top: 16px;">
+						<label>在岗</label>
+						<input id="work1" name="workState" value="70161001" type="checkbox" onclick="changeCheck(1)">
+					</div>
+					
+					<div class="mui-input-row mui-checkbox mui-left" style="margin-top: 12px;margin-bottom: 16px;">
+						<label>离岗</label>
+						<input id="work2" name="workState" value="70161002" type="checkbox" onclick="changeCheck(2)">
+					</div>
+					<div></div>
+				</form>
+			</div>
+		</div>
+		<div class="footReturn" style="margin-top: 40px;">
+			<input id="submitBtn" value="保    存"  type="submit" class="submit" style="width: 100%" onclick="save()">
+		</div>
+	</form>
+</body>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//页面数据加载
+		var url = httpUrlHead+"SalesConsultantService/queryWorkState.json?"+httpUrlEnd;
+    	makeFormCall(url,function(json){
+    		if(json.RESULT.funcStatus == '1'){
+	    		if(!IsNull(json.WORKING_STATE)){
+	    			if( json.WORKING_STATE == '70161001'){
+	    				$("#work1").attr("checked",true);
+	    			}else{
+	    				$("#work2").attr("checked",true);
+	    			}
+				}
+    		} else {
+    			MuiAlert("查询失败!请联系管理员");
+    		}
+    	},"fm",true);
+	});
+	
+	function save(){
+		var url = httpUrlHead+"SalesConsultantService/saveWorkState.json?"+httpUrlEnd;
+		makeFormCall(url,function(json){
+    		if(json.RESULT.funcStatus == '1'){
+    			MuiAlert("保存成功");
+	    		ToUrl("mine.html");
+    		} else {
+    			MuiAlert("保存失败!请联系管理员");
+    		}
+    	},"fm",true);
+	}
+	
+	function changeCheck(flag){
+		if( flag == 1){
+			$("#work1").attr("checked",true);
+			$("#work2").removeAttr("checked");
+		}else if(flag == 2){
+			$("#work2").attr("checked",true);
+			$("#work1").removeAttr("checked");
+		}
+	}
+</script>
+</html>

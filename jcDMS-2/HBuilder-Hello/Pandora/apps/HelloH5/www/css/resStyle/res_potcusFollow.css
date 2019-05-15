@@ -1,0 +1,15 @@
+/* 跟进邀约明细 */
+.xf-cardexplain{
+	padding-top: 44px !important;
+}
+.kuang tr td:first-child {
+    width: 30% !important;
+}
+
+.activityQueryBtn{
+	border: 1px solid #1790E4;
+	background-color: #FFFFFF;
+	color: #1790E4;
+	font-size: 17px;
+	border-radius: 15px;
+}

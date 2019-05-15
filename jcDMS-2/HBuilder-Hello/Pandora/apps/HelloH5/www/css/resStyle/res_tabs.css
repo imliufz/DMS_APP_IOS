@@ -1,0 +1,35 @@
+ /* tabs页卡样式调整 */
+ #rp{
+	 margin-bottom: 10px;
+	 background-color: #FFFFFF;
+ }
+ #rp td{
+	 background-color: #FFFFFF;
+ }
+ #rp input{
+	 background-color: #FFFFFF !important;
+	 font-size: 15px;
+	 height: 40px !important;
+ }
+ #rp td .line{
+	 background-color: #1790E4 !important;
+   display: block;
+   width: 60px;
+   height: 3px;
+   position: relative;
+   margin-left: -30px;
+   left: 50%;
+ }
+ #reportTable{
+	 box-shadow: 0 1px 4px 0 rgba(0,0,0,0.05);
+ }
+ input[type='button']:enabled:active, input[type='button'].mui-active:enabled, input[type='submit']:enabled:active, input[type='submit'].mui-active:enabled, input[type='reset']:enabled:active, input[type='reset'].mui-active:enabled, button:enabled:active, button.mui-active:enabled, .mui-btn:enabled:active, .mui-btn.mui-active:enabled {
+    color: #333 !important;
+}
+.bg-gray{
+	background-color: #f5f5f5 !important;
+}
+table{
+	background-color: #FFFFFF;
+}
+ /* tabs页卡样式调整-end */

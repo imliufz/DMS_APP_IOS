@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="js/html_head.js"></script>
+<style>
+.msgTd {
+	height: 45px;
+	border: none;
+	width: 100%;
+	font-size: 16px;
+}
+</style>
+<title>我的标签</title>
+</head>
+<body onselectstart="return true;" ondragstart="return false;" >
+	<script type="text/javascript" src="js/detail_head.js?_menu_name=我的标签&_back_url=login.html" id="detail_head_js"></script>
+	<form id="fm" method="post">
+		<div class="mui-content" style="padding-top: 60px;">
+			<h5 class="mui-content-padded">首次登录请先维护标签</h5>
+			<div class="mui-card" id="tagContent">
+			</div>
+		</div>
+		<div class="footReturn" style="margin-top: 40px;">
+			<input id="submitBtn" value="保    存"  type="button" class="submit" style="width: 100%" onclick="saveTag()">
+		</div>
+	</form>
+</body>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//页面数据加载
+		var url = httpUrlHead+"PotcusAchieveService/queryConsultantTag.json?"+httpUrlEnd;
+    	makeFormCall(url,function(json){
+    		if(json.RESULT.funcStatus == '1'){
+    			if(json.allTagList != null && json.allTagList.length > 0 ){
+    				var appendHtml = "";
+    				for(var i=0;i<json.allTagList.length;i++){
+    					appendHtml += '<div class="mui-input-row mui-checkbox mui-left" style="margin-top: 16px;margin-bottom: 16px">';
+    					appendHtml += '<label>'+json.allTagList[i].CODE_DESC+'</label>';
+    					appendHtml += '<input id="'+json.allTagList[i].CODE_ID+'" name="consultantTag" value="'+json.allTagList[i].CODE_ID+'" type="checkbox" ></div>';
+    				}
+    				$("#tagContent").html(appendHtml);
+    			}
+	    		if(json.tagList != null && json.tagList.length > 0 ){
+	    			for(var i=0;i<json.tagList.length;i++){
+	    				$("#"+json.tagLis[i].TAG_TYPE).attr("checked",true);
+	    			}
+				}
+    		} else {
+    			MuiAlert("查询失败!请联系管理员");
+    		}
+    	},"fm",true);
+	});
+	
+	function saveTag(){
+		if($("input[name='consultantTag']:checked").length == 0 ){
+			MuiAlert("至少选择一个标签");
+			return false;
+		}
+		var url = httpUrlHead+"PotcusAchieveService/saveConsultantTag.json?"+httpUrlEnd;
+		makeFormCall(url,function(json){
+    		if(json.RESULT.funcStatus == '1'){
+    			MuiAlert("保存成功");
+	    		ToUrl("index.html");
+    		} else {
+    			MuiAlert("查询失败!请联系管理员");
+    		}
+    	},"fm",true);
+	}
+</script>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="js/html_head.js"></script>
+		<style>
+			.css_input {
+				border: 1px solid #ccc;
+				padding: 7px 0px;
+				border-radius: 3px;
+				padding-left: 5px;
+				-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+				box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+				-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+				-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+				transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+				display: inline-block;
+				line-height: 36px;
+				width: 95%;
+			}
+			
+			.css_input:focus {
+				border-color: #66afe9;
+				outline: 0;
+				-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+				box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
+			}
+			.css_lable{
+				width: 80px;
+				display: inline-block;
+				float: left;
+				line-height: 36px;
+				font-size: 12px;
+				text-align: right;
+			}
+		</style>
+		<title>在岗状态</title>
+	</head>
+
+	<body onselectstart="return true;" ondragstart="return false;" style="background-color: white;">
+		<script type="text/javascript" src="js/detail_head.js?_menu_name=手机验证&_back_url=login.html" id="detail_head_js"></script>
+		<form id="fm" method="post">
+			<input type="hidden" name="id" id="id" />
+			<div class="mui-content-padded" style="margin-top: 80px;">
+				<div style="width: 95%;text-align: center;margin-bottom: 20px;"><p id="showContent">首次登录营销宝需要验证手机</p></div>
+				<div style="margin-bottom: 30px;text-align: center;">
+					<input type="text" id="tel" name="tel" class="css_input" style="width: 60%;" readonly="readonly">
+					<input id="sendMsgBtn" type="button" class="mui-btn" 
+						style="width: 33%;margin-left: 6px;height: 36px;font-size: 12px;"
+						 value="发送验证码" onclick="sendMsg();">
+				</div>
+				<div style="text-align: center;">
+					<input type="text" name="telCode" id="telCode" class="css_input" style="" placeholder="请输入验证码">
+				</div>
+				<div style="margin-top: 30px;text-align: center;">
+					<input style="width: 95%;height: 36px;font-size: 14px;background-color: #1790E4;color: white;"
+						 type="button" class="mui-btn" value="完成验证" onclick="submitValidate();">
+				</div>
+			</div>
+		</form>
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var id = UrlParm.parm("id");
+			$("#id").val(id);
+			var url = httpUrlHead + "SalesConsultantService/queryTelById.json?ID=" + id + "&" + httpUrlEnd;
+			makeFormCall(url, function(json) {
+				if(json.RESULT.funcStatus == '1') {
+					if(!IsNull(json.TEL)) {
+						$("#tel").val(json.TEL);
+					}
+				} else {
+					MuiAlert("查询失败!请联系管理员");
+				}
+			}, "fm", true);
+//			getVcode();
+		});
+		
+		function sendMsg(){
+			$("#sendMsgBtn").attr("disabled",true);
+			var url = httpUrlHead + "SalesConsultantService/sendMsg.json?" + httpUrlEnd;
+			makeFormCall(url, function(json) {
+				if( !IsNull(json.returnFlag) && json.returnFlag == '1' ){
+					settime();
+					var showContent = "已发送验证码到已下手机："+$("#tel").val()+"，有效性一分钟";
+					$("#showContent").text(showContent).show();
+				}else{
+					MuiAlert(json.returnMsg);
+					$("#sendMsgBtn").removeAttr("disabled");
+				}
+			}, "fm", true);
+		}
+		
+		var countdown=60; 
+		function settime() { 
+			var obj = $("#sendMsgBtn");
+		    if (countdown == 0) { 
+		        obj.removeAttr("disabled");    
+		        obj.val("发送验证码"); 
+		        countdown = 60; 
+		        return;
+		    } else {
+		    	obj.attr("disabled",true);
+		        obj.val("重新发送(" + countdown + ")"); 
+		        countdown--; 
+		    } 
+		setTimeout(function() { 
+		    settime() }
+		    ,1000) 
+		}
+
+		function submitValidate() {
+			var telCode = $("#telCode").val();
+			if(IsNull(telCode)){
+				MuiAlert("手机验证码不能为空");
+				return false;
+			}
+			var url = httpUrlHead + "SalesConsultantService/telValidate.json?" + httpUrlEnd;
+			makeFormCall(url, function(json) {
+				if(json.RESULT.funcStatus == '1') {
+					MuiAlert("验证成功");
+					ToUrl("login.html");
+				}
+			}, "fm", true);
+		}
+		
+		function getVcode(){
+			var url = httpUrlHead + "SalesConsultantService/getVcode.json?" + httpUrlEnd;
+			makeFormCall(url, function(json) {
+				if(json.RESULT.funcStatus == '1') {
+					var vCode = json.vCode;
+					if(!IsNull(vCode)){
+						$("#randomCode").val(vCode);
+					}
+				} else {
+					MuiAlert("保存失败!请联系管理员");
+				}
+			}, "fm", true);
+		}
+	</script>
+
+</html>

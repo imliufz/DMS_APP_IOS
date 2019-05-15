@@ -1,0 +1,21 @@
+/**
+ * 2019-03-07  当前页样式覆盖
+ */
+body{
+	background-color: #FFFFFF;
+}
+.xf-res-cardexplain{
+	height: 87% !important;
+}
+.xf-res-cardexplain li{
+	color: #666;
+	font-size: 15px;
+}
+.xf-res-cardexplain tr.settingTr{
+	border-bottom: 1px solid #F5F5F5;
+	position: relative;
+}
+.xf-res-cardexplain img{
+	width: 40px !important;
+	height: 40px !important;
+}
